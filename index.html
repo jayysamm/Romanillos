@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px #fff;
+        }
+
+        .output {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html">Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Number System Converter</h1>
+        
+        <div class="input-group">
+            <label for="decimal">Decimal</label>
+            <input type="number" id="decimal" placeholder="Enter a decimal number">
+        </div>
+
+        <div class="input-group">
+            <label for="binary">Binary</label>
+            <input type="text" id="binary" readonly class="output">
+        </div>
+
+        <div class="input-group">
+            <label for="octal">Octal</label>
+            <input type="text" id="octal" readonly class="output">
+        </div>
+
+        <div class="input-group">
+            <label for="hexadecimal">Hexadecimal</label>
+            <input type="text" id="hexadecimal" readonly class="output">
+        </div>
+    </div>
+
+    <script>
+        const decimalInput = document.getElementById('decimal');
+        const binaryOutput = document.getElementById('binary');
+        const octalOutput = document.getElementById('octal');
+        const hexOutput = document.getElementById('hexadecimal');
+
+        decimalInput.addEventListener('input', () => {
+            const decimalValue = parseInt(decimalInput.value, 10);
+
+            if (isNaN(decimalValue)) {
+                binaryOutput.value = '';
+                octalOutput.value = '';
+                hexOutput.value = '';
+            } else {
+                binaryOutput.value = decimalValue.toString(2);
+                octalOutput.value = decimalValue.toString(8);
+                hexOutput.value = decimalValue.toString(16).toUpperCase();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+        }
+
+        nav {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 5px #fff;
+        }
+
+        .output {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Calculator</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <section id="contact" style="padding: 20px; text-align: center; background: rgba(255, 255, 255, 0.1); border-radius: 10px; margin: 20px 0; width: 90%; max-width: 500px;">
+        <h2>Contact</h2>
+        <p>We’d love to hear your feedback or help with any questions!</p>
+        <form action="#" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+            <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border: none; border-radius: 5px;">
+            <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border: none; border-radius: 5px;">
+            <textarea name="message" rows="4" placeholder="Your Message" required style="padding: 10px; border: none; border-radius: 5px;"></textarea>
+            <button type="submit" style="padding: 10px; background: #2575fc; color: white; border: none; border-radius: 5px; cursor: pointer;">Send Message</button>
+        </form>
+        <p style="margin-top: 10px;">Or email us directly at <a href="https://www.facebook.com/jaysam.romanillos.7" style="color: #6a11cb; text-decoration: none;">jaysamromanillos.7</a>.</p>
+    </section>
+</body>
+</html>
